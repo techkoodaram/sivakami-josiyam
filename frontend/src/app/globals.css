@@ -1,38 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --primary: #6b21a8;
-  --primary-foreground: #ffffff;
-  --secondary: #f59e0b;
-  --secondary-foreground: #1e1b4b;
-  --accent: #d946ef;
-  --background: #fdfcfb;
-  --foreground: #1e1b4b;
-  --card: #ffffff;
-  --card-foreground: #1e1b4b;
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
-  --border: #e5e7eb;
+@theme {
+  --color-primary: #6b21a8;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f59e0b;
+  --color-secondary-foreground: #1e1b4b;
+  --color-accent: #d946ef;
+  --color-background: #fdfcfb;
+  --color-foreground: #1e1b4b;
+  --color-card: #ffffff;
+  --color-card-foreground: #1e1b4b;
+  --color-muted: #f3f4f6;
+  --color-muted-foreground: #6b7280;
+  --color-border: #e5e7eb;
 }
 
 .dark {
-  --primary: #a855f7;
-  --primary-foreground: #ffffff;
-  --secondary: #fbbf24;
-  --secondary-foreground: #1e1b4b;
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
-  --muted: #334155;
-  --muted-foreground: #94a3b8;
-  --border: #334155;
+  --color-primary: #a855f7;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #fbbf24;
+  --color-secondary-foreground: #1e1b4b;
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
+  --color-card: #1e293b;
+  --color-card-foreground: #f8fafc;
+  --color-muted: #334155;
+  --color-muted-foreground: #94a3b8;
+  --color-border: #334155;
 }
 
 body {
-  @apply bg-[var(--background)] text-[var(--foreground)] antialiased;
+  @apply bg-background text-foreground antialiased;
   font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
 }
 
@@ -42,15 +40,15 @@ body {
   }
   
   .btn-primary {
-    @apply bg-[var(--primary)] text-[var(--primary-foreground)] px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg active:scale-95;
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg active:scale-95;
   }
   
   .btn-secondary {
-    @apply bg-[var(--secondary)] text-[var(--secondary-foreground)] px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg active:scale-95;
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg active:scale-95;
   }
   
   .card-premium {
-    @apply bg-[var(--card)] rounded-2xl p-8 shadow-2xl border border-[var(--border)] transition-all hover:border-[var(--secondary)]/50;
+    @apply bg-card rounded-2xl p-8 shadow-2xl border border-border transition-all hover:border-secondary/50;
   }
 }
 
